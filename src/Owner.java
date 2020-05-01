@@ -19,12 +19,15 @@ public class Owner {
 
     public void getAlPets() {
         for(int i =0; i < petList.size(); i++)
-            System.out.println(petList.get(i).getName() + "\t"
-                    + petList.get(i).getRace() + "\t" + petList.get(i).getAge());
+            System.out.print(petList.get(i).getName() + "\t"
+                    + petList.get(i).getRace() + "\t" + petList.get(i).getAge() + "\n");
     }
 
     public String getName() {
-        return name;
+        if(name == null)
+            throw new AssertionError("Deez nut");
+        else
+            return name;
     }
 
     public void setName(String name) {
@@ -32,6 +35,8 @@ public class Owner {
     }
 
     public String getEmail() {
+        if(email == null)
+            throw new AssertionError("Deez nut");
         return email;
     }
 
@@ -40,6 +45,8 @@ public class Owner {
     }
 
     public int getAge() {
+        if(name == null)
+            throw new AssertionError("Deez nut");
         return age;
     }
 
