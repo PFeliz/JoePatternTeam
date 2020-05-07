@@ -1,3 +1,5 @@
+//antipattern found cuckoo, only the test class was used for all the tests in question.
+
 public class Tests {
     /*
         Anti pattern found Test-per-Method it only has one method for each test
@@ -5,6 +7,7 @@ public class Tests {
     */
     @Test
     public void Test1() {
+        //antipattern found Enumerator,several tests listed without any information about the test: Test1, Test2,Test3
         String name = "joe";
         Owner joe = new Owner(name, "joe@gmail.com", 21);
         System.out.println("Owner created!");
