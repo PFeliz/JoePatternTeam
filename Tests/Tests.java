@@ -1,9 +1,11 @@
+//antipattern found cuckoo, only the test class was used for all the tests in question
 public class Tests {
     /*
         Anti pattern found Test-per-Method it only has one method for each test
         other anti pattern found is The Loudmouth, that have unnecessary messages for implementation of test
     */
     @Test
+    //antipattern found Enumerator,several tests listed without any information about the test: Test1, Test2,Test3
     public void Test1() {
         String name = "joe";
         Owner joe = new Owner(name, "joe@gmail.com", 21);
