@@ -1,11 +1,8 @@
-import org.junit.jupiter.api.Test;
-
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
-
-import static org.junit.jupiter.api.Assertions.*;
-
 public class Tests {
+    /*
+        Anti pattern found Test-per-Method it only has one method for each test
+        other anti pattern found is The Loudmouth, that have unnecessary messages for implementation of test
+    */
     @Test
     public void Test1() {
         String name = "joe";
@@ -26,7 +23,11 @@ public class Tests {
             String getName = joe.getName();
         });
     }
-
+    /*
+      Anti pattern found Slow Poke, has a 3 sec time cycle
+      Thread.sleep(3000)
+      Making the function slow down for the testing in cause
+    */
     @Test
     public void Test3() {
         int pet_id;
